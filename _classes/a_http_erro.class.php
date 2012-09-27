@@ -1,0 +1,1 @@
+<?phpclass a_http_erro{	public $erro;		public function __construct($erro)	{		$this->erro = $erro;	}		public function __toString()	{		return "$this->erro";	}}

@@ -1,0 +1,44 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, hr {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+cursor:pointer;
+}
+
+fieldset, img {
+  border:  none;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol, ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border:  none;
+}

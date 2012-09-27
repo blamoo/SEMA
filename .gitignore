@@ -1,0 +1,13 @@
+# Exemplos do pChart
+3rdparty/pChart/examples/pictures/*
+
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
