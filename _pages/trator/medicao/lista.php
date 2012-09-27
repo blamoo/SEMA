@@ -21,23 +21,9 @@ if (count($medicoes) == 0)
 else
 {
 ?>
-	<thead class="center">
-		<tr>
-			<th colspan="3">Rotações</th>
-			<th colspan="2">Força medida (kgf)</th>
-			<th colspan="2">Chv (L.h<sup>-1</sup>)</th>
-			<th rowspan="2">Ações</th>
-		</tr>
-		<tr>
-			<th>Motor (rpm)</th>
-			<th>TDP (rpm)</th>
-			<th>Ventilador (rpm)</th>
-			<th>Medição 1</th>
-			<th>Medição 2</th>
-			<th>Medição 1</th>
-			<th>Medição 2</th>
-		</tr>
-	</thead>
+	<!--thead>
+		<tr><th>Nome</th><th>Ações</th></tr>
+	</thead-->
 	<tbody>
 <?php
 	foreach($medicoes as $key => $val)
@@ -51,8 +37,8 @@ else
 			<td><?php echo $val->fm_clp_2; ?></td>
 			<td><?php echo $val->chv_clp_1; ?></td>
 			<td><?php echo $val->chv_clp_2; ?></td>
-			<!--td><?php echo $val->dados_forca; ?></td
-			<td><?php echo $val->dados_braco; ?></td>
+			<!--td><?php echo $val->dados_forca; ?></td-->
+			<!--td><?php echo $val->dados_braco; ?></td>
 			<td><?php echo $val->pi_kw_tdp; ?></td>
 			<td><?php echo $val->pi_cv_tdp; ?></td>
 			<td><?php echo $val->pi_kw_motor; ?></td>

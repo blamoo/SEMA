@@ -26,7 +26,7 @@ $page_title = 'Detalhes da medição Nº ' . $medicao->id;
 
 	<tr><td></td><td>Id</td><td><?php echo $medicao->id; ?></td></tr>
 	<tr><td></td><td>Trator</td><td><?php echo $medicao->id_trator; ?></td></tr>
-	<tr><td rowspan="3">Rotações</td><td>Motor (rpm)</td><td><?php echo $medicao->rpm_motor; ?></td></tr>
+	<tr><td rowspan="3">Rotações</td><td>motor (rpm)</td><td><?php echo $medicao->rpm_motor; ?></td></tr>
 	<tr><td>TDP (rpm)</td><td><?php echo $medicao->rpm_tdp; ?></td></tr>
 	<tr><td>Ventilador (rpm)</td><td><?php echo $medicao->rpm_ventilador; ?></td></tr>
 	<tr><td rowspan="2">Força medida (kgf)</td><td>Medição 1</td><td><?php echo $medicao->fm_clp_1; ?></td></tr>
