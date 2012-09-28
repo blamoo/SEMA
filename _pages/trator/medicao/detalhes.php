@@ -20,10 +20,6 @@ $page_title = 'Detalhes da medição Nº ' . $medicao->id;
 <?php require LAYOUT_PATH . 'header.php'; ?>
 
 <table class="formatted">
-<colgroup>
-    <col span="1" style="background-color: margin: 90px;" />
-</colgroup>
-
 	<tr><td></td><td>Id</td><td><?php echo $medicao->id; ?></td></tr>
 	<tr><td></td><td>Trator</td><td><?php echo $medicao->id_trator; ?></td></tr>
 	<tr><td rowspan="3">Rotações</td><td>motor (rpm)</td><td><?php echo $medicao->rpm_motor; ?></td></tr>
@@ -33,8 +29,9 @@ $page_title = 'Detalhes da medição Nº ' . $medicao->id;
 	<tr><td>Medição 2</td><td><?php echo $medicao->fm_clp_2; ?></td></tr>
 	<tr><td rowspan="2">Chv (L.h<sup>-1</sup>)</td><td>Medição 1</td><td><?php echo $medicao->chv_clp_1; ?></td></tr>
 	<tr><td>Medição 2</td><td><?php echo $medicao->chv_clp_2; ?></td></tr>
-	<tr><td rowspan="2">Dados</td><td>Força (kgf)</td><td><?php echo $medicao->dados_forca; ?></td></tr>
+	<tr><td rowspan="3">Dados</td><td>Força (kgf)</td><td><?php echo $medicao->dados_forca; ?></td></tr>
 	<tr><td>Braço (m)</td><td><?php echo $medicao->dados_braco; ?></td></tr>
+	<tr><td>Fator de correção da força</td><td><?php echo $medicao->dados_fator_correcao; ?></td></tr>
 	<tr><td rowspan="4">Potência indicada</td><td>kW TDP</td><td><?php echo $medicao->pi_kw_tdp; ?></td></tr>
 	<tr><td>cv TDP</td><td><?php echo $medicao->pi_cv_tdp; ?></td></tr>
 	<tr><td>kW Motor</td><td><?php echo $medicao->pi_kw_motor; ?></td></tr>

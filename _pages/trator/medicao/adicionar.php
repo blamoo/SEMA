@@ -54,7 +54,9 @@ $page_title = 'Adicionar medição';
 			<label>Força medida 2 (kgf)</label>
 			<input type="text" name="fm_clp_2" value="<?php echo $medicao->fm_clp_2; ?>" />
 		</div>
+		
 		<div class="clear"></div>
+		
 		<div class="form_line w_1_4">
 			<label>Chv 1 (L.h-1)</label>
 			<input type="text" name="chv_clp_1" value="<?php echo $medicao->chv_clp_1; ?>" />
@@ -65,9 +67,16 @@ $page_title = 'Adicionar medição';
 			<input type="text" name="chv_clp_2" value="<?php echo $medicao->chv_clp_2; ?>" />
 		</div>
 		
-		<div class="form_line">
+		<div class="clear"></div>
+		
+		<div class="form_line w_1_4">
 			<label>Braço (m)</label>
 			<input type="text" name="dados_braco" value="<?php echo $medicao->dados_braco; ?>" />
+		</div>
+
+		<div class="form_line w_1_4">
+			<label>Fator de correção da força</label>
+			<input type="text" name="dados_fator_correcao" value="<?php echo $medicao->dados_fator_correcao; ?>" />
 		</div>
 		
 		<div class="form_line">

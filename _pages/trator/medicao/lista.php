@@ -37,23 +37,9 @@ else
 			<td><?php echo $val->fm_clp_2; ?></td>
 			<td><?php echo $val->chv_clp_1; ?></td>
 			<td><?php echo $val->chv_clp_2; ?></td>
-			<!--td><?php echo $val->dados_forca; ?></td-->
-			<!--td><?php echo $val->dados_braco; ?></td>
-			<td><?php echo $val->pi_kw_tdp; ?></td>
-			<td><?php echo $val->pi_cv_tdp; ?></td>
-			<td><?php echo $val->pi_kw_motor; ?></td>
-			<td><?php echo $val->pi_cv_motor; ?></td>
-			<td><?php echo $val->ti_kgfm_tdp; ?></td>
-			<td><?php echo $val->ti_nm_tdp; ?></td>
-			<td><?php echo $val->ti_kgfm_motor; ?></td>
-			<td><?php echo $val->ti_nm_motor; ?></td>
-			<td><?php echo $val->ti_reserva_torque; ?></td>
-			<td><?php echo $val->cc_chv; ?></td>
-			<td><?php echo $val->cc_chm; ?></td>
-			<td><?php echo $val->cc_cs; ?></td>
-			<td><?php echo $val->consumo_energetico; ?></td>
-			<td><?php echo $val->eficiencia_termica; ?></td>
-			<td><?php echo $val->energia_especifica; ?></td-->
+			<td><?php echo $val->dados_forca; ?></td>
+			<td><?php echo $val->dados_braco; ?></td>
+			<td><?php echo $val->dados_fator_correcao; ?></td>
 			
 			<td>
 				<a title="Detalhes" href="<?php echo htmlspecialchars($val->url_detalhes()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/document.png" alt="Detalhes" /></a>

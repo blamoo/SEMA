@@ -18,6 +18,7 @@ class a_medicao
 	
 	public $dados_forca;
 	public $dados_braco = A_DADOS_BRACO;
+	public $dados_fator_correcao = A_FATOR_CORRECAO;
 	
 	public $pi_kw_tdp;
 	public $pi_cv_tdp;
@@ -132,16 +133,18 @@ class a_medicao
 			$tester->isNotEmpty(204, $this->chv_clp_1,		'Preencha o campo "Chv 1"');
 			$tester->isNotEmpty(205, $this->chv_clp_2, 		'Preencha o campo "Chv 2"');
 			$tester->isNotEmpty(206, $this->dados_braco, 	'Preencha o campo "Braço"');
+			$tester->isNotEmpty(207, $this->dados_fator_correcao, 	'Preencha o campo "Fator de correção da força"');
 		}
 
 		if ($tester->success())
 		{
-			$tester->isInt		(301, $this->rpm_motor, 	'O campo "Rotações do Motor" deve ser um número inteiro válido');
-			$tester->isInt		(302, $this->fm_clp_1, 		'O campo "Força medida 1" deve ser um número inteiro válido');
-			$tester->isInt		(303, $this->fm_clp_2, 		'O campo "Força medida 2" deve ser um número inteiro válido');
-			$tester->isFloat	(304, $this->chv_clp_1, 	'O campo "Chv 1" deve ser um número válido');
-			$tester->isFloat	(305, $this->chv_clp_2,		'O campo "Chv 2" deve ser um número válido');
-			$tester->isFloat	(306, $this->dados_braco,	'O campo "Braço" deve ser um número válido');
+			$tester->isInt		(301, $this->rpm_motor, 			'O campo "Rotações do Motor" deve ser um número inteiro válido');
+			$tester->isInt		(302, $this->fm_clp_1, 				'O campo "Força medida 1" deve ser um número inteiro válido');
+			$tester->isInt		(303, $this->fm_clp_2, 				'O campo "Força medida 2" deve ser um número inteiro válido');
+			$tester->isFloat	(304, $this->chv_clp_1, 			'O campo "Chv 1" deve ser um número válido');
+			$tester->isFloat	(305, $this->chv_clp_2,				'O campo "Chv 2" deve ser um número válido');
+			$tester->isFloat	(306, $this->dados_braco,			'O campo "Braço" deve ser um número válido');
+			$tester->isFloat	(307, $this->dados_fator_correcao,	'O campo "Fator de correção da força" deve ser um número válido');
 		}
 
 		if ($tester->success())
@@ -152,6 +155,7 @@ class a_medicao
 			$tester->isNumRange	(404, $this->chv_clp_1,				0, 999999.999,				'O campo "Chv 1" ser um número entre 0 e 999999.999');
 			$tester->isNumRange	(405, $this->chv_clp_2,				0, 999999.999,				'O campo "Chv 2" ser um número entre 0 e 999999.999');
 			$tester->isNumRange	(406, $this->dados_braco,			0, 999999.999,				'O campo "Braço" ser um número entre 0 e 999999.999');
+			$tester->isNumRange	(407, $this->dados_fator_correcao,	0, 999999.999,				'O campo "Fator de correção da força" ser um número entre 0 e 999999.999');
 		}
 	}
 	
@@ -162,7 +166,7 @@ class a_medicao
 		$this->rpm_tdp = $this->rpm_motor / $trator->relacao_transmissao_motor;
 		$this->rpm_ventilador = $this->rpm_motor * $trator->relacao_transmissao_ventilador;
 		
-		$this->dados_forca = (($this->fm_clp_1 + $this->fm_clp_2) / 2) / A_FATOR_FORCA;
+		$this->dados_forca = (($this->fm_clp_1 + $this->fm_clp_2) / 2) / $this->dados_fator_correcao;
 		$this->ti_kgfm_tdp = $this->dados_braco * $this->dados_forca;
 		
 		$this->pi_kw_tdp = ($this->rpm_tdp * $this->ti_kgfm_tdp) / 974;
@@ -192,8 +196,8 @@ class a_medicao
 		$db = db::instance();
 		
 		$resultado = $db->query('REPLACE INTO 
-		`medicao` (`id`, `id_trator`, `rpm_motor`, `rpm_tdp`, `rpm_ventilador`, `fm_clp_1`, `fm_clp_2`, `chv_clp_1`, `chv_clp_2`, `dados_forca`, `dados_braco`, `pi_kw_tdp`, `pi_cv_tdp`, `pi_kw_motor`, `pi_cv_motor`, `ti_kgfm_tdp`, `ti_nm_tdp`, `ti_kgfm_motor`, `ti_nm_motor`, `cc_chv`, `cc_chm`, `cc_cs`, `consumo_energetico`, `eficiencia_termica`, `energia_especifica`)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);', array(
+		`medicao` (`id`, `id_trator`, `rpm_motor`, `rpm_tdp`, `rpm_ventilador`, `fm_clp_1`, `fm_clp_2`, `chv_clp_1`, `chv_clp_2`, `dados_forca`, `dados_braco`, `dados_fator_correcao`, `pi_kw_tdp`, `pi_cv_tdp`, `pi_kw_motor`, `pi_cv_motor`, `ti_kgfm_tdp`, `ti_nm_tdp`, `ti_kgfm_motor`, `ti_nm_motor`, `cc_chv`, `cc_chm`, `cc_cs`, `consumo_energetico`, `eficiencia_termica`, `energia_especifica`)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);', array(
 		$this->id,
 		$this->id_trator,
 		$this->rpm_motor,
@@ -205,6 +209,7 @@ class a_medicao
 		$this->chv_clp_2,
 		$this->dados_forca,
 		$this->dados_braco,
+		$this->dados_fator_correcao,
 		$this->pi_kw_tdp,
 		$this->pi_cv_tdp,
 		$this->pi_kw_motor,
@@ -257,3 +262,31 @@ class a_medicao
 		return PAGE_URL . 'trator/medicao/excluir?id=' . $this->id . '&id_trator=' . $this->id_trator;
 	}
 }
+/*
+id							Id
+id_trator					Trator
+rpm_motor					Rotações - Motor (rpm)
+rpm_tdp						Rotações - TDP (rpm)
+rpm_ventilador				Rotações - Ventilador (rpm)
+fm_clp_1					Força medida - Medição 1
+fm_clp_2					Força medida - Medição 2
+chv_clp_1					Chv (L.h-1) - Medição 1
+chv_clp_2					Chv (L.h-1) - Medição 2
+dados_forca					Dados - Força (kgf)
+dados_braco					Dados - Braço (m)
+dados_fator_correcao		Dados - Fator de correção da força
+pi_kw_tdp					Potência indicada - kW TDP
+pi_cv_tdp					Potência indicada - cv TDP
+pi_kw_motor					Potência indicada - kW Motor
+pi_cv_motor					Potência indicada - cv Motor
+ti_kgfm_tdp					Torque indicado - kgf.m TDP
+ti_nm_tdp					Torque indicado - N.m TDP
+ti_kgfm_motor				Torque indicado - kgf.m Motor
+ti_nm_motor					Torque indicado - N.m Motor
+cc_chv						Consumo de combustível - Chv(L.h^-1)
+cc_chm						Consumo de combustível - Chm (kg.h^-1)
+cc_cs						Consumo de combustível - Cs (g.kWh^-1)
+consumo_energetico			Consumo energético (MJ.h^-1)
+eficiencia_termica			Eficiência (%)
+energia_especifica			Energia específica (kWh.L^-1)
+*/
