@@ -1,0 +1,3 @@
+[submodule "3rdparty/PHPWord"]
+	path = 3rdparty/PHPWord
+	url = git://github.com/PHPOffice/PHPWord.git
