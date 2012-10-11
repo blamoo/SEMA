@@ -6,16 +6,24 @@ class fs_helper
 	
 	public static function CacheRemoteFile($url)
 	{
-		$ch = curl_init($url);
 		$fn = tempnam(sys_get_temp_dir(), 'fsh');
-		$fp = fopen($fn, 'w');
+		
+		if (function_exists('curl_init'))
+		{
+			$ch = curl_init($url);
+			$fp = fopen($fn, 'w');
 
-		curl_setopt($ch, CURLOPT_FILE, $fp);
-		curl_setopt($ch, CURLOPT_HEADER, 0);
+			curl_setopt($ch, CURLOPT_FILE, $fp);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
 
-		curl_exec($ch);
-		curl_close($ch);
-		fclose($fp);
+			curl_exec($ch);
+			curl_close($ch);
+			fclose($fp);
+		}
+		else
+		{
+			file_put_contents($fn, file_get_contents($url));
+		}
 		
 		return $fn;
 	}
