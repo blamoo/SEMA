@@ -4,7 +4,7 @@ class fs_helper
 {
 	private function __construct(){}
 	
-	public static function CacheRemoteFile($url)
+	public static function CacheRemoteFile($url, $forceExtension = false)
 	{
 		$fn = tempnam(sys_get_temp_dir(), 'fsh');
 		
@@ -25,6 +25,9 @@ class fs_helper
 			file_put_contents($fn, file_get_contents($url));
 		}
 		
+		if ($forceExtension !== false)
+			$fn = fs_helper::ChangeExtension($fn, $forceExtension);
+			
 		return $fn;
 	}
 	
