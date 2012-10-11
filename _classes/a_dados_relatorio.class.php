@@ -4,6 +4,7 @@ class a_dados_relatorio
 {
 	public $dados;
 	public $trator;
+	
 	public function __construct(a_trator $trator)
 	{
 		$this->trator = $trator;
@@ -83,7 +84,7 @@ class a_dados_relatorio
 		return $this->url_grafico(http_build_query($ret));
 	}
 
-	public function url_consumo_combustível_tdp()
+	public function url_consumo_combustivel_tdp()
 	{
 		$ret = array();
 		
