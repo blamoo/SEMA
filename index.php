@@ -58,7 +58,7 @@ $GLOBALS['info_path'] = explode('/', isset($_SERVER['PATH_INFO']) ? $_SERVER['PA
 /* Variáveis da aplicação */
 /**************************/
 
-include CONFIG_PATH . 'config.php';
+a_configurar::carregar();
 
 // Configuração da classe de acesso ao banco de dados (schema, usuário e senha)
 db::set_defaults('trator', 'root', '');

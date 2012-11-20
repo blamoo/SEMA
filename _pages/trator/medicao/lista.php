@@ -21,10 +21,22 @@ if (count($medicoes) == 0)
 else
 {
 ?>
-	<!--thead>
-		<tr><th>Nome</th><th>Ações</th></tr>
-	</thead-->
-	<tbody>
+	<thead class="center">
+		<tr>
+			<th>rpm<br/>Motor</th>
+			<th>rpm<br/>TDP</th>
+			<th>rpm<br/>Ventilador</th>
+			<th>Força<br/>Medição 1</th>
+			<th>Força<br/>Medição 2</th>
+			<th>Chv<br/>Medição 1</th>
+			<th>Chv<br/>Medição 2</th>
+			<th>Força</th>
+			<th>Braço</th>
+			<th>Fator de<br/>correção da força</th>
+			<th>Ações</th>
+		</tr>
+	</thead>
+	<tbody class="center">
 <?php
 	foreach($medicoes as $key => $val)
 	{

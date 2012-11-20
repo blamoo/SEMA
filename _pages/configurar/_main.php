@@ -1,0 +1,1 @@
+<?php$bc->add(a_trator::url_lista(), 'Configurações');switch(safe($info_path[2])){	case '': case 'index':		return require PAGES_PATH . 'configurar/index.php';	case 'salvar': 				return require PAGES_PATH . 'configurar/salvar.php';		default: return new a_http_erro(404);}

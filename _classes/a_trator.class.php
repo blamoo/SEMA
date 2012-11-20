@@ -179,7 +179,12 @@ class a_trator
 
 	public function url_relatorio_resumo()
 	{
-		return PAGE_URL . 'trator/relatorio?id_trator=' . $this->id;
+		return PAGE_URL . 'trator/relatorio/resumo?id_trator=' . $this->id;
+	}
+
+	public function url_relatorio_download()
+	{
+		return PAGE_URL . 'trator/relatorio/download?id_trator=' . $this->id;
 	}
 
 	public static function url_lista()

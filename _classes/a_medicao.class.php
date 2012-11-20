@@ -17,8 +17,8 @@ class a_medicao
 	public $chv_clp_2;
 	
 	public $dados_forca;
-	public $dados_braco = A_DADOS_BRACO;
-	public $dados_fator_correcao = A_FATOR_CORRECAO;
+	public $dados_braco;
+	public $dados_fator_correcao;
 	
 	public $pi_kw_tdp;
 	public $pi_cv_tdp;
@@ -39,6 +39,14 @@ class a_medicao
 	public $energia_especifica;
 	
 	private $trator;
+	
+	public function __construct()
+	{
+		$this->chv_clp_2 = 0;
+		$this->fm_clp_2 = 0;
+		$this->dados_braco = a_configurar::$DADOS_BRACO;
+		$this->dados_fator_correcao = a_configurar::$FATOR_CORRECAO;
+	}
 	
 	public static function criar_por_id($id)
 	{

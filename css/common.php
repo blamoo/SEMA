@@ -1,13 +1,26 @@
+<?php
+session_start();
+header('Content-Type: text/css');
+
+define('SCHEME', 0);
+// define('SCHEME', 1);
+
+function s()
+{
+	$args = func_get_args();
+	echo $args[SCHEME];
+}
+?>
 body{
 padding-top: 12px;
 font-size: 12px;
 font-family: tahoma;
-background-color: #104c92;
-color: #ffffff;
+background-color: <?php s('#104c92', 'white', '#c4ffd0'); ?>;
+color: <?php s('#ffffff', '#000000'); ?>;
 }
 
 a{
-color: 	#dddddd;
+color: 	<?php s('#dddddd', '#111111'); ?>;
 text-decoration: none;
 cursor: pointer;
 }
@@ -44,7 +57,7 @@ div#main{
 width: 960px;
 margin: 0 auto 24px auto;
 padding: 12px;
-border: 1px solid #ffffff;
+border: 1px solid <?php s('#ffffff', '#000000'); ?>;
 border-radius: 6px;
 }
 
@@ -64,7 +77,7 @@ text-decoration: none;
 }
 
 div#main div#breadcrumb span.bull{
-color: 	#FFA500;
+color: 	<?php s('#FFA500', '#156230'); ?>;
 }
 
 div#main div#operacoes{
@@ -148,7 +161,7 @@ margin: 1px;
 
 div#main form.formatted fieldset.confirma input.confirma:hover{
 cursor: pointer;
-border: 1px solid #ffffff;
+border: 1px solid <?php s('#ffffff', '#000000'); ?>;
 margin: 0;
 }
 
@@ -167,30 +180,55 @@ div#main table.formatted{
 margin-bottom: 12px;
 }
 
+div#main table.formatted thead.center th, div#main table.formatted tbody.center td{
+text-align: center;
+}
+
 div#main table.formatted td, div#main table.formatted th{
 padding: 3px 6px;
 vertical-align: middle;
 }
 
 div#main table.formatted tbody tr:nth-child(odd){
-background-color: #406391;
+background-color: <?php s('#406391', '#b5c5d9'); ?>;
 }
 div#main table.formatted tbody tr:nth-child(even){
-background-color: #3d70b3;
+background-color: <?php s('#3d70b3', '#bebdcc'); ?>;
 }
 
 div#main table.formatted tbody tr:hover{
-background-color: #e4e9f0;
-color: #000000;
+background-color: <?php s('#e4e9f0', '#31507d'); ?>;
+color: <?php s('#000000', '#ffffff'); ?>;
 }
 
 div#main table.formatted tbody tr:hover a{
-color: #000000;
+color: <?php s('#000000', '#ffffff'); ?>;
 }
 
 div#main table.formatted thead th{
-background-color: #3a4a5f;
+background-color: <?php s('#3a4a5f', '#3a4a5f'); ?>;
+color: <?php s('#ffffff', '#ffffff'); ?>;
 font-weight: bold;
+}
+
+/***********************/
+/* Páginas específicas */
+/***********************/
+
+/**/
+div#document_container.trator_relatorio_resumo div#main div.content{
+text-align: center;
+}
+
+div#document_container.trator_relatorio_resumo div#main div.content a{
+font-size: 18px;
+margin: 12px;
+display: inline-block;
+}
+div#document_container.trator_relatorio_resumo div#main div.content img{
+border: 1px solid black;
+margin: 3px;
+width: 470px;
 }
 
 /******************/
