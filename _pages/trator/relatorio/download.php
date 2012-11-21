@@ -1,6 +1,8 @@
 <?php
 $relatorio = new a_dados_relatorio($trator);
-// $valido = $relatorio->validar();
+
+if(!$relatorio->validar())
+	exit('Um relatório não pode ser gerado pois esse trator não tem medições cadastradas');
 
 //cria cópias locais dos gráficos (a biblioteca PHPWord não aceita imagens remotas)
 $temp_potencia_torque_tdp       = fs_helper::CacheRemoteFile($relatorio->url_potencia_torque_tdp(),		'png');

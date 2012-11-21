@@ -13,6 +13,11 @@ $series = safe($_GET['series']);
 $eixos = safe($_GET['eixos']);
 $abs = safe($_GET['abs']);
 
+if (count($eixos)){
+	header('Content-Type: image/png');
+	exit(base64_decode('iVBORw0KGgoAAAANSUhEUgAAAG8AAAARAQMAAADpI2CSAAAABlBMVEUAAAD///+l2Z/dAAAAhElEQVQImWNgQAX1/5HAHwZ/+//2UM7Mn38Y3FG5zgjuT6BiZ4sKi3r2dh77wzYzLFsYPI2Nje2NjSXnzwSCHgZPG2Mbe+PDdvKNh2fOnMPgY2lsaW882Wb+/OdgLkSx5fz5YFk/GBekdw6Dv4WFhT17s408yOQ5EEfawx1JBBfhI1QAAH7HiHfCAN6uAAAAAElFTkSuQmCC'));
+}
+
 // dados do gráfico
 
 $myData = new pData();

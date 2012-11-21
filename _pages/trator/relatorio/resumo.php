@@ -13,11 +13,20 @@ $document_container_class = 'trator_relatorio_resumo';
 	<body>
 <?php require LAYOUT_PATH . 'header.php'; ?>
 	<div class="content">
-		<a onclick="alert('O processamento do relatório pode demorar alguns segundos.\nClique apenas uma vez e aguarde a notificação de download')" href="<?php echo htmlspecialchars($trator->url_relatorio_download()); ?>">Download do relatório</a><br/>
-		
-		<img src="<?php echo htmlspecialchars($relatorio->url_potencia_torque_motor()) ?>" alt="Potência e Torque na TDP" />
-		<img src="<?php echo htmlspecialchars($relatorio->url_potencia_torque_tdp()) ?>" alt="Consumo de combustível  (TDP)" />
-		<img src="<?php echo htmlspecialchars($relatorio->url_consumo_combustivel_tdp()) ?>" alt="Potência e Torque no motor" />
+		<?php
+		if ($relatorio->validar())
+		{
+		?>
+			<a onclick="alert('O processamento do relatório pode demorar alguns segundos.\nClique apenas uma vez e aguarde a notificação de download')" href="<?php echo htmlspecialchars($trator->url_relatorio_download()); ?>">Download do relatório</a><br/>
+			
+			<img src="<?php echo htmlspecialchars($relatorio->url_potencia_torque_motor()) ?>" alt="Potência e Torque na TDP" />
+			<img src="<?php echo htmlspecialchars($relatorio->url_potencia_torque_tdp()) ?>" alt="Consumo de combustível  (TDP)" />
+			<img src="<?php echo htmlspecialchars($relatorio->url_consumo_combustivel_tdp()) ?>" alt="Potência e Torque no motor" />
+		<?php
+		}
+		else
+			echo alert::red('<p>Um relatório não pode ser gerado pois esse trator não tem medições cadastradas</p>');
+		?>
 	</div>
 		
 <?php require LAYOUT_PATH . 'footer.php'; ?>

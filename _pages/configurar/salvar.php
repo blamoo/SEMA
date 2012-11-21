@@ -5,7 +5,7 @@ a_configurar::validar($tester, $_POST);
 
 if ($tester->success())
 {
-	a_configurar::salvar($_POST);
+	a_configurar::salvar((float) $_POST['dados_braco'], (float) $_POST['fator_correcao']);
 	echo alert::green('Configurações salvas com sucesso');
 }	
 else
