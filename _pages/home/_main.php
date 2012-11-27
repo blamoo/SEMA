@@ -9,7 +9,7 @@ $page_title = 'Página Inicial';
 	<body>
 <?php require LAYOUT_PATH . 'header.php'; ?>
 		<div class="tac">
-			<a href="<?php echo PAGE_URL ?>trator">Trator</a>
+			<a href="<?php echo PAGE_URL ?>trator">Trator</a> - 
 			<a href="<?php echo a_configurar::url_form(); ?>">Configurações</a>
 		</div>
 		
