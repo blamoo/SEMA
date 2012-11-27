@@ -11,6 +11,7 @@ if ($id === null)
 	$operacao = 'insert';
 	
 	$bc->add($trator->url_medicao_adicionar(), 'Adicionar');
+	$page_title = 'Adicionar medição';
 }
 else
 {
@@ -23,9 +24,9 @@ else
 	
 	$bc->add($medicao->url_detalhes(), $medicao->nome());
 	$bc->add($medicao->url_alterar(), 'Alterar');
+	$page_title = 'Alterar medição';
 }
 
-$page_title = 'Adicionar medição';
 ?>
 <?php require LAYOUT_PATH . 'dtd.php'; ?>
 <html>

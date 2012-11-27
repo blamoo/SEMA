@@ -1,6 +1,8 @@
 <?php
 $operacao = 'recalcular';
 
+$bc->add($trator->url_medicao_recalcular(), 'Recalcular');
+
 $page_title = 'Recalcular medições';
 ?>
 <?php require LAYOUT_PATH . 'dtd.php'; ?>

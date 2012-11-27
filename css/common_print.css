@@ -1,0 +1,262 @@
+/*
+Essa folha de estilo foi usada para a criação das telas do manual em cores mais claras, apenas para
+redução dos custos de impressão, e não deve ser incluída no sistema.
+Para impressões futuras, recriar o arquivo com base em uma cópia atualizada do arquivo "css/common.css"
+*/
+body{
+padding-top: 12px;
+font-size: 12px;
+font-family: tahoma;
+background-color: white;
+color: #000000;
+}
+
+a{
+color: 	#111111;
+text-decoration: none;
+cursor: pointer;
+}
+
+a:hover{
+text-decoration: underline;
+}
+
+.ui-tooltip-content{
+text-align: center;
+}
+
+div#header{
+width: 960px;
+margin: 0 auto;
+margin-bottom: 12px;
+}
+
+div#header img{
+height: 90px;
+display: block;
+float: left;
+margin-right: 12px;
+}
+
+div#header h1{
+float: left;
+height: 90px;
+line-height: 90px;
+font-size: 18px;
+}
+
+div#main{
+width: 960px;
+margin: 0 auto 24px auto;
+padding: 12px;
+border: 1px solid #000000;
+border-radius: 6px;
+}
+
+div#main h1{
+font-size: 26px;
+text-align: center;
+margin-bottom: 12px;
+}
+
+/* Breadcrumb */
+
+div#main div#breadcrumb{
+margin-bottom: 12px;
+}
+div#main div#breadcrumb a{
+text-decoration: none;
+}
+
+div#main div#breadcrumb span.bull{
+color: 	#156230;
+}
+
+div#main div#operacoes{
+float: left;
+background-color: #eeeeee;
+border: 1px solid black;
+padding: 6px;
+border-radius: 6px;
+}
+
+/* divs de alerta */
+div#main div.alert{
+color: #000000;
+padding: 6px;
+margin-bottom: 12px;
+border-radius: 6px;
+}
+
+/* cores: HSL(X, 90%, 70%) */
+div#main div.alert{
+
+}
+div#main div.alert ul.erros{
+list-style: disc inside;
+}
+
+div#main div.alert.yellow{
+background-color: #F7EA6E;
+}
+
+div#main div.alert.green{
+background-color: #ADF76E;
+}
+
+div#main div.alert.red{
+background-color: #F76E6E;
+}
+/* formulários */
+
+div#main form.formatted{
+padding-bottom: 12px;
+}
+
+div#main form.formatted div.form_line{
+float: left;
+width: 960px;
+margin-top: 12px;
+}
+
+div#main form.formatted div.form_line.w_1_2{width: 480px;}
+div#main form.formatted div.form_line.w_1_3{width: 320px;}
+div#main form.formatted div.form_line.w_2_3{width: 640px;}
+div#main form.formatted div.form_line.w_1_4{width: 240px;}
+div#main form.formatted div.form_line.w_3_4{width: 720px;}
+
+div#main form.formatted label{
+display: block;
+margin-bottom: 3px;
+}
+
+div#main form.formatted input{
+}
+
+div#main form.formatted hr{
+float: left;
+width: 960px;
+margin-top: 12px;
+}
+
+div#main form.formatted fieldset.confirma{
+text-align: center;
+}
+
+div#main form.formatted fieldset.confirma input.confirma{
+display: inline-block;
+vertical-align: middle;
+border: none;
+color: #000000;
+border-radius: 3px;
+margin: 1px;
+}
+
+div#main form.formatted fieldset.confirma input.confirma:hover{
+cursor: pointer;
+border: 1px solid #000000;
+margin: 0;
+}
+
+div#main form.formatted fieldset.confirma input.confirma.sim{
+background-color: #F76E6E;
+padding: 3px;
+}
+
+div#main form.formatted fieldset.confirma input.confirma.nao{
+background-color: #ADF76E;
+padding: 6px;
+}
+
+/* tabelas */
+div#main table.formatted{
+margin-bottom: 12px;
+}
+
+div#main table.formatted thead.center th, div#main table.formatted tbody.center td{
+text-align: center;
+}
+
+div#main table.formatted td, div#main table.formatted th{
+padding: 3px 6px;
+vertical-align: middle;
+}
+
+div#main table.formatted tbody tr:nth-child(odd){
+background-color: #b5c5d9;
+}
+div#main table.formatted tbody tr:nth-child(even){
+background-color: #bebdcc;
+}
+
+div#main table.formatted tbody tr:hover{
+background-color: #31507d;
+color: #ffffff;
+}
+
+div#main table.formatted tbody tr:hover a{
+color: #ffffff;
+}
+
+div#main table.formatted thead th{
+background-color: #3a4a5f;
+color: #ffffff;
+font-weight: bold;
+}
+
+/***********************/
+/* Páginas específicas */
+/***********************/
+
+/**/
+div#document_container.trator_relatorio_resumo div#main div.content{
+text-align: center;
+}
+
+div#document_container.trator_relatorio_resumo div#main div.content a{
+font-size: 18px;
+margin: 12px;
+display: inline-block;
+padding: 6px;
+background-color: green;
+border: 1px solid white;
+color: white;
+border-radius: 6px;
+}
+div#document_container.trator_relatorio_resumo div#main div.content img{
+border: 1px solid black;
+margin: 3px;
+width: 470px;
+}
+
+/******************/
+/* Classes gerais */
+/******************/
+.clear{
+clear:both;
+overflow:hidden;
+}
+.hidden{
+display:none;
+height: 0px;
+}
+.notext{
+color:transparent;
+text-indent: -999em;
+overflow: hidden;
+font-size: 0px;
+line-height:100%;
+}
+.nofill{
+border: none;
+background-color: transparent;
+height: 24px;
+}
+.fl{float: left;}
+.fr{float: right;}
+.cl{clear: left;}
+.cr{clear: right;}
+.cb{clear: both;}
+.tac{text-align: center;}
+.tal{text-align: left;}
+.tar{text-align: right;}

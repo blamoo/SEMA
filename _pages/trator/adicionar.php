@@ -10,6 +10,7 @@ if ($id === null)
 	$operacao = 'insert';
 	
 	$bc->add(a_trator::url_adicionar(), 'Adicionar');
+	$page_title = 'Adicionar trator';
 }
 else
 {
@@ -22,9 +23,9 @@ else
 	
 	$bc->add($trator->url_detalhes(), $trator->nome);
 	$bc->add($trator->url_alterar(), 'Alterar');
+	$page_title = 'Alterar trator';
 }
 
-$page_title = 'Adicionar trator';
 ?>
 <?php require LAYOUT_PATH . 'dtd.php'; ?>
 <html>
