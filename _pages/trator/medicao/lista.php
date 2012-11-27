@@ -71,6 +71,7 @@ else
 <div id="operacoes">
 	<a title="Adicionar" href="<?php echo htmlspecialchars($trator->url_medicao_adicionar()); ?>"><img src="<?php echo IMG_URL; ?>fuuge_24/plus-circle.png" alt="Adicionar" /></a>
 	<a title="Relatório" href="<?php echo htmlspecialchars($trator->url_relatorio_resumo()); ?>"><img src="<?php echo IMG_URL; ?>fuuge_24/table-export.png" alt="Relatório" /></a>
+	<a title="Recalcular medições" href="<?php echo htmlspecialchars($trator->url_medicao_recalcular()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/arrow-circle-double.png" alt="Recalcular medições" /></a>
 	<a title="Voltar" href="<?php echo htmlspecialchars(a_trator::url_lista()); ?>"><img src="<?php echo IMG_URL; ?>fuuge_24/arrow-180.png" alt="Voltar" /></a>
 </div>
 

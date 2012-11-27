@@ -33,6 +33,7 @@ $page_title = 'Detalhes do trator - ' . $trator->nome;
 </table>
 <div id="operacoes">
 	<a title="Medições" href="<?php echo htmlspecialchars($trator->url_medicao_lista()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/vise.png" alt="Medições" /></a>
+	<a title="Recalcular medições" href="<?php echo htmlspecialchars($trator->url_medicao_recalcular()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/arrow-circle-double.png" alt="Recalcular medições" /></a>
 	<a title="Alterar" href="<?php echo htmlspecialchars($trator->url_alterar()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/pencil.png" alt="Alterar" /></a>
 	<a title="Excluir" href="<?php echo htmlspecialchars($trator->url_excluir()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/cross.png" alt="Excluir" /></a>
 	<a title="Relatório" href="<?php echo htmlspecialchars($trator->url_relatorio_resumo()); ?>"><img src="<?php echo IMG_URL; ?>fuuge_24/table-export.png" alt="Relatório" /></a>

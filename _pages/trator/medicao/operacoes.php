@@ -63,7 +63,12 @@ switch ($operacao)
 
 	case 'recalcular':
 		$medicoes = a_medicao::criar_lista_por_trator($trator);
-
+		if ($confirma != 'Sim')
+		{
+			http_helper::js_redirect($trator->url_medicao_lista());
+			exit;
+		}
+		
 		foreach ($medicoes as $val)
 		{
 			$val->calcular();

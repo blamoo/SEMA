@@ -172,6 +172,11 @@ class a_trator
 		return PAGE_URL . 'trator/medicao/adicionar?id_trator=' . $this->id;
 	}
 
+	public function url_medicao_recalcular()
+	{
+		return PAGE_URL . 'trator/medicao/recalcular?id_trator=' . $this->id;
+	}
+
 	public function url_medicao_operacoes($operacao)
 	{
 		return PAGE_URL . 'trator/medicao/operacoes?id_trator=' . $this->id . '&operacao=' . $operacao;

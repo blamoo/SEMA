@@ -31,9 +31,10 @@ else
 		<tr>
 			<td><a href="<?php echo htmlspecialchars($val->url_detalhes()); ?>"><?php echo $val->nome; ?></a></td>
 			<td>
+				<a title="Detalhes" href="<?php echo htmlspecialchars($val->url_detalhes()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/document.png" alt="Detalhes" /></a>
 				<a title="Medições" href="<?php echo htmlspecialchars($val->url_medicao_lista()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/vise.png" alt="Medições" /></a>
 				<a title="Relatório" href="<?php echo htmlspecialchars($val->url_relatorio_resumo()); ?>"><img src="<?php echo IMG_URL; ?>fuuge_24/table-export.png" alt="Relatório" /></a>
-				<a title="Detalhes" href="<?php echo htmlspecialchars($val->url_detalhes()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/document.png" alt="Detalhes" /></a>
+				<a title="Recalcular medições" href="<?php echo htmlspecialchars($val->url_medicao_recalcular()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/arrow-circle-double.png" alt="Recalcular medições" /></a>
 				<a title="Alterar" href="<?php echo htmlspecialchars($val->url_alterar()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/pencil.png" alt="Alterar" /></a>
 				<a title="Excluir" href="<?php echo htmlspecialchars($val->url_excluir()); ?>"><img src="<?php echo IMG_URL ?>fuuge_24/cross.png" alt="Excluir" /></a>
 			</td>

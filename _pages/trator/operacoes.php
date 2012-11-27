@@ -31,7 +31,7 @@ switch ($operacao)
 		{
 			$trator->salvar();
 			echo alert::green('Alterado com sucesso');
-			http_helper::js_redirect($trator->url_detalhes());
+			http_helper::js_redirect($trator->url_medicao_recalcular());
 		}
 		else
 			echo alert::red($tester->result_html());
