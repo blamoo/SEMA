@@ -1,6 +1,6 @@
 Ícones
 ======
-Alguns ícones criados por Yusuke Kamiyamane (http://p.yusukekamiyamane.com/). Todos os direitos reservados. Licenciado sob Creative Commons (CC BY 3.0).
+These icons are available under a Creative Commons Attribution 3.0 License.
 
 Biblioteca pChart
 =================
@@ -18,3 +18,7 @@ Animação GIF de carregamento de páginas
 ajaxload.info
 Code : Yannick Croissant
 Design : Kath
+
+Biblioteca PHPWord
+==================
+PHPWord is licensed under LGPL (GNU LESSER GENERAL PUBLIC LICENSE)
