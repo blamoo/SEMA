@@ -22,7 +22,7 @@ class db
 		catch (Exception $e)
 		{
 			header('Content-Type: text/plain; charset=utf-8');
-			exit('Ocorreu um erro durante a conexão com o banco de dados');
+			exit('Ocorreu um erro durante a conexão com o banco de dados. Verifique a conectividade, nome de usuário e senha.');
 		}
 		
 	}
