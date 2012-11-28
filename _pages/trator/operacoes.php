@@ -31,7 +31,13 @@ switch ($operacao)
 		{
 			$trator->salvar();
 			echo alert::green('Alterado com sucesso');
-			http_helper::js_redirect($trator->url_medicao_recalcular());
+			
+			$medicoes = a_medicao::criar_lista_por_trator($trator);
+			
+			if (count($medicoes) !== 0)
+				http_helper::js_redirect($trator->url_medicao_recalcular());
+			else
+				http_helper::js_redirect($trator->url_detalhes());
 		}
 		else
 			echo alert::red($tester->result_html());

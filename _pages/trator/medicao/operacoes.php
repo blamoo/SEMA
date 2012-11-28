@@ -12,7 +12,7 @@ switch ($operacao)
 		$medicao->set_trator($trator);
 
 		$medicao->validar($operacao, $tester);
-
+		
 		if ($tester->success())
 		{
 			$medicao->calcular();

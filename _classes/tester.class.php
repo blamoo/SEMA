@@ -68,17 +68,27 @@ class tester implements Countable
 	
 	public function isNotEmpty($id, $test, $error)
 	{
-		return $this->isTrue($id, $test != '', $error);
+		return $this->isTrue($id, $test !== '', $error);
 	}
 	
 	public function isInt($id, $test, $error)
 	{
-		return $this->isTrue($id, filter_var($test, FILTER_VALIDATE_INT), $error);
+		return $this->isTrue($id, $test == 0 || filter_var($test, FILTER_VALIDATE_INT), $error);
 	}
 	
 	public function isFloat($id, $test, $error)
 	{
-		return $this->isTrue($id, filter_var($test, FILTER_VALIDATE_FLOAT), $error);
+		return $this->isTrue($id, $test == 0 || filter_var($test, FILTER_VALIDATE_FLOAT), $error);
+	}
+	
+	public function isNumericString($id, $test, $error)
+	{
+		return $this->isTrue($id, preg_match('/^[0-9.]*$/', $test) !== 0, $error);
+	}
+	
+	public function isNotZero($id, $test, $error)
+	{
+		return $this->isTrue($id, $test != 0, $error);
 	}
 	
 	public function isStrMin($id, $str, $min, $error)

@@ -86,7 +86,18 @@ class a_trator
 			$tester->isNotEmpty(208, $this->densidade_combustivel, 				'O campo "Densidade combustível" está vazio');
 			$tester->isNotEmpty(209, $this->poder_calorifico, 					'O campo "Poder calorífico" está vazio');
 		}
-
+		
+		if ($tester->success())
+		{
+			$tester->isNumericString(212, $this->rotacao_nominal_motor, 			'O campo "Rotação nominal do motor" deve ser um número válido');
+			$tester->isNumericString(213, $this->rotacao_maxima_livre, 				'O campo "Rotação máxima livre" deve ser um número válido');
+			$tester->isNumericString(214, $this->relacao_transmissao_motor, 		'O campo "Relação de transmissão Motor/TDP" deve ser um número válido');
+			$tester->isNumericString(215, $this->relacao_transmissao_ventilador,	'O campo "Relação de transmissão Ventilador/motor" deve ser um número válido');
+			$tester->isNumericString(216, $this->horas_trator, 						'O campo "Horas do trator" deve ser um número válido');
+			$tester->isNumericString(218, $this->densidade_combustivel, 			'O campo "Densidade combustível" deve ser um número válido');
+			$tester->isNumericString(219, $this->poder_calorifico, 					'O campo "Poder calorífico" deve ser um número válido');
+		}
+		
 		if ($tester->success())
 		{
 			$tester->isStrMax	(301, $this->nome, 100,							'O campo "Nome" não pode ter mais de 100 caracteres');

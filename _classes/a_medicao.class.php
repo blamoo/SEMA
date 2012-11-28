@@ -103,7 +103,7 @@ class a_medicao
 	public function set_trator(a_trator $trator)
 	{
 		if ($this->trator !== null)
-			throw new RuntimeException('set_trator() não deve ser usado caso já exista um trator no objeto');
+			throw new RuntimeException('set_trator() não deve ser usado caso já exista um trator cadastrado no objeto');
 		
 		$this->id_trator = $trator->id;
 		$this->trator = $trator;
@@ -135,35 +135,57 @@ class a_medicao
 		
 		if ($tester->success())
 		{
-			$tester->isNotEmpty(201, $this->rpm_motor, 		'Preencha o campo "Rotações do Motor"');
-			$tester->isNotEmpty(202, $this->fm_clp_1, 		'Preencha o campo "Força medida 1"');
-			$tester->isNotEmpty(203, $this->fm_clp_2, 		'Preencha o campo "Força medida 2"');
-			$tester->isNotEmpty(204, $this->chv_clp_1,		'Preencha o campo "Chv 1"');
-			$tester->isNotEmpty(205, $this->chv_clp_2, 		'Preencha o campo "Chv 2"');
-			$tester->isNotEmpty(206, $this->dados_braco, 	'Preencha o campo "Braço"');
+			$tester->isNotEmpty(201, $this->rpm_motor, 				'Preencha o campo "Rotações do Motor"');
+			$tester->isNotEmpty(202, $this->fm_clp_1, 				'Preencha o campo "Força medida 1"');
+			$tester->isNotEmpty(203, $this->fm_clp_2, 				'Preencha o campo "Força medida 2"');
+			$tester->isNotEmpty(204, $this->chv_clp_1,				'Preencha o campo "Chv 1"');
+			$tester->isNotEmpty(205, $this->chv_clp_2, 				'Preencha o campo "Chv 2"');
+			$tester->isNotEmpty(206, $this->dados_braco, 			'Preencha o campo "Braço"');
 			$tester->isNotEmpty(207, $this->dados_fator_correcao, 	'Preencha o campo "Fator de correção da força"');
 		}
-
+		
 		if ($tester->success())
 		{
-			$tester->isInt		(301, $this->rpm_motor, 			'O campo "Rotações do Motor" deve ser um número inteiro válido');
-			$tester->isInt		(302, $this->fm_clp_1, 				'O campo "Força medida 1" deve ser um número inteiro válido');
-			$tester->isInt		(303, $this->fm_clp_2, 				'O campo "Força medida 2" deve ser um número inteiro válido');
-			$tester->isFloat	(304, $this->chv_clp_1, 			'O campo "Chv 1" deve ser um número válido');
-			$tester->isFloat	(305, $this->chv_clp_2,				'O campo "Chv 2" deve ser um número válido');
-			$tester->isFloat	(306, $this->dados_braco,			'O campo "Braço" deve ser um número válido');
-			$tester->isFloat	(307, $this->dados_fator_correcao,	'O campo "Fator de correção da força" deve ser um número válido');
+			$tester->isNumericString(211, $this->rpm_motor, 			'O campo "Rotações do Motor" deve ser um número válido');
+			$tester->isNumericString(212, $this->fm_clp_1, 				'O campo "Força medida 1" deve ser um número válido');
+			$tester->isNumericString(213, $this->fm_clp_2, 				'O campo "Força medida 2" deve ser um número válido');
+			$tester->isNumericString(214, $this->chv_clp_1, 			'O campo "Chv 1" deve ser um número válido');
+			$tester->isNumericString(215, $this->chv_clp_2,				'O campo "Chv 2" deve ser um número válido');
+			$tester->isNumericString(216, $this->dados_braco,			'O campo "Braço" deve ser um número válido');
+			$tester->isNumericString(217, $this->dados_fator_correcao,	'O campo "Fator de correção da força" deve ser um número válido');
 		}
 
 		if ($tester->success())
 		{
-			$tester->isNumRange	(401, $this->rpm_motor,				0, 9999,					'O campo "Rotações do Motor" ser um número entre 0 e 9999');
-			$tester->isNumRange	(402, $this->fm_clp_1,				0, 9999,					'O campo "Força medida 1" ser um número entre 0 e 9999');
-			$tester->isNumRange	(403, $this->fm_clp_2,				0, 9999,					'O campo "Força medida 2" ser um número entre 0 e 9999');
-			$tester->isNumRange	(404, $this->chv_clp_1,				0, 999999.999,				'O campo "Chv 1" ser um número entre 0 e 999999.999');
-			$tester->isNumRange	(405, $this->chv_clp_2,				0, 999999.999,				'O campo "Chv 2" ser um número entre 0 e 999999.999');
-			$tester->isNumRange	(406, $this->dados_braco,			0, 999999.999,				'O campo "Braço" ser um número entre 0 e 999999.999');
-			$tester->isNumRange	(407, $this->dados_fator_correcao,	0, 999999.999,				'O campo "Fator de correção da força" ser um número entre 0 e 999999.999');
+			$tester->isNotZero(301, $this->rpm_motor, 				'O campo "Rotações do Motor" deve ser diferente de zero');
+			$tester->isNotZero(302, $this->fm_clp_1, 				'O campo "Força medida 1" deve ser diferente de zero');
+			//$tester->isNotZero(303, $this->fm_clp_2, 				'O campo "Força medida 2" deve ser diferente de zero');
+			$tester->isNotZero(304, $this->chv_clp_1, 				'O campo "Chv 1" deve ser diferente de zero');
+			//$tester->isNotZero(305, $this->chv_clp_2,				'O campo "Chv 2" deve ser diferente de zero');
+			$tester->isNotZero(306, $this->dados_braco,				'O campo "Braço" deve ser diferente de zero');
+			$tester->isNotZero(307, $this->dados_fator_correcao,	'O campo "Fator de correção da força" deve ser diferente de zero');
+		}
+		
+		if ($tester->success())
+		{
+			$tester->isInt		(401, $this->rpm_motor, 			'O campo "Rotações do Motor" deve ser um número inteiro válido');
+			$tester->isInt		(402, $this->fm_clp_1, 				'O campo "Força medida 1" deve ser um número inteiro válido');
+			$tester->isInt		(403, $this->fm_clp_2, 				'O campo "Força medida 2" deve ser um número inteiro válido');
+			$tester->isFloat	(404, $this->chv_clp_1, 			'O campo "Chv 1" deve ser um número válido');
+			$tester->isFloat	(405, $this->chv_clp_2,				'O campo "Chv 2" deve ser um número válido');
+			$tester->isFloat	(406, $this->dados_braco,			'O campo "Braço" deve ser um número válido');
+			$tester->isFloat	(407, $this->dados_fator_correcao,	'O campo "Fator de correção da força" deve ser um número válido');
+		}
+
+		if ($tester->success())
+		{
+			$tester->isNumRange	(501, $this->rpm_motor,				0, 9999,					'O campo "Rotações do Motor" ser um número entre 0 e 9999');
+			$tester->isNumRange	(502, $this->fm_clp_1,				0, 9999,					'O campo "Força medida 1" ser um número entre 0 e 9999');
+			$tester->isNumRange	(503, $this->fm_clp_2,				0, 9999,					'O campo "Força medida 2" ser um número entre 0 e 9999');
+			$tester->isNumRange	(504, $this->chv_clp_1,				0, 999999.999,				'O campo "Chv 1" ser um número entre 0 e 999999.999');
+			$tester->isNumRange	(505, $this->chv_clp_2,				0, 999999.999,				'O campo "Chv 2" ser um número entre 0 e 999999.999');
+			$tester->isNumRange	(506, $this->dados_braco,			0, 999999.999,				'O campo "Braço" ser um número entre 0 e 999999.999');
+			$tester->isNumRange	(507, $this->dados_fator_correcao,	0, 999999.999,				'O campo "Fator de correção da força" ser um número entre 0 e 999999.999');
 		}
 	}
 	
