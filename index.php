@@ -2,7 +2,7 @@
 session_start(); // Inicia uma sessão com o usuário e inicia a variável $_SESSION
 error_reporting(-1); // Evita que o PHP esconda erros, deve ser mduado para 0 quando o sistema estiver no ar
 
-header('Content-Type: text/html;charset=utf-8'); // Cabeçalho HTTP que informa que todos os arquivos serão do tipo text/html escritos em UTF-8
+header('Content-Type: text/html;charset=utf-8'); // Cabeçalho HTTP que informa que todos os arquivos serão do tipo text/html com código de caracteres UTF-8
 date_default_timezone_set('Etc/GMT+3'); // Define o fuso horário para funções que manipulam datas
 
 /**************/
@@ -57,11 +57,11 @@ $GLOBALS['info_path'] = explode('/', isset($_SERVER['PATH_INFO']) ? $_SERVER['PA
 /**************************/
 /* Variáveis da aplicação */
 /**************************/
+ // Configurações da conexão com o banco de dados
+include CONFIG_PATH . 'mysql.php';
 
+// Configurações de constantes usadas nos cálculos
 a_configurar::carregar();
-
-// Configuração da classe de acesso ao banco de dados (schema, usuário e senha)
-db::set_defaults('trator', 'root', '');
 
 // Objeto da classe "breadcrumb" que gerencia o caminho de links que aparece no topo das páginas
 $bc = new breadcrumb();
@@ -82,7 +82,7 @@ $js = array();
 /* Páginas */
 /***********/
 
-// chama o direcionador das páginas  e armazena o resultado retornado na variávle $result
+// Inclui o arquivo de fluxo das páginas e armazena o resultado retornado na variável $result
 $result = require PAGES_PATH . '_main.php';
 
 if ($result !== 1)
