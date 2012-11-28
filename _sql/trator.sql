@@ -26,9 +26,10 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `medicao`
 --
 
+DROP TABLE IF EXISTS `medicao`;
 CREATE TABLE IF NOT EXISTS `medicao` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_trator` int(9) DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_trator` int(10) unsigned NOT NULL,
   `rpm_motor` int(4) DEFAULT NULL,
   `rpm_tdp` float(10,3) DEFAULT NULL,
   `rpm_ventilador` int(4) DEFAULT NULL,
@@ -53,7 +54,8 @@ CREATE TABLE IF NOT EXISTS `medicao` (
   `consumo_energetico` float(10,3) DEFAULT NULL,
   `eficiencia_termica` float(10,3) DEFAULT NULL,
   `energia_especifica` float(10,3) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `FK_medicao_1` (`id_trator`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
@@ -72,11 +74,7 @@ INSERT INTO `medicao` (`id`, `id_trator`, `rpm_motor`, `rpm_tdp`, `rpm_ventilado
 (9, 1, 2200, 639.535, 2794, 1990, 1990, 25.200, 26.280, 398.000, 0.305, 0.000, 79.705, 108.396, 88.562, 120.440, 121.390, 1190.836, 39.209, 384.637, 25.740, 21.622, 271.269, 951.350, 30.161, 3.097),
 (10, 1, 2300, 668.605, 2921, 1886, 1886, 25.670, 25.630, 377.200, 0.305, 0.000, 78.974, 107.401, 87.748, 119.334, 115.046, 1128.601, 37.160, 364.535, 25.650, 21.546, 272.825, 948.024, 29.989, 3.079),
 (11, 1, 2400, 697.674, 3048, 1225, 1225, 19.710, 19.890, 245.000, 0.305, 0.000, 53.525, 72.792, 59.473, 80.880, 74.725, 733.052, 24.136, 236.774, 19.800, 16.632, 310.731, 731.808, 26.331, 2.703),
-(12, 1, 2500, 726.744, 3175, 135, 135, 10.630, 10.860, 27.000, 0.305, 0.000, 6.144, 8.356, 6.827, 9.285, 8.235, 80.785, 2.660, 26.093, 10.745, 9.026, 1468.925, 397.135, 5.570, 0.572),
-(13, 3, 347, 28.917, 4164, 87, 8, 78.000, 78.000, 0.000, 78.000, 0.000, 21.999, 29.918, 24.444, 33.242, 741.000, 7269.210, 68.611, 673.075, 78.000, 936.000, 42546.945, 11232.000, 0.705, 0.282),
-(14, 8, 12, 0.140, 912, 121, 98, 98.000, 98.000, 21.900, 0.305, 0.000, 0.001, 0.001, 0.001, 0.001, 6.675, 65.483, 0.086, 0.846, 98.000, 7448.000, 10000000.000, 566048.000, 0.000, 0.000),
-(15, 8, 30, 0.349, 2280, 9, 9, 9.000, 9.000, 1.800, 0.305, 0.000, 0.000, 0.000, 0.000, 0.000, 0.549, 5.382, 0.007, 0.070, 9.000, 684.000, 10000000.000, 51984.000, 0.000, 0.000),
-(16, 1, 12, 3.488, 15, 12, 12, 12.000, 23.000, 6.000, 0.305, 2.000, 0.007, 0.009, 0.007, 0.010, 1.829, 17.941, 0.591, 5.795, 17.500, 14.700, 2244333.000, 646.800, 0.004, 0.000);
+(12, 1, 2500, 726.744, 3175, 135, 135, 10.630, 10.860, 27.000, 0.305, 0.000, 6.144, 8.356, 6.827, 9.285, 8.235, 80.785, 2.660, 26.093, 10.745, 9.026, 1468.925, 397.135, 5.570, 0.572);
 
 -- --------------------------------------------------------
 
@@ -84,6 +82,7 @@ INSERT INTO `medicao` (`id`, `id_trator`, `rpm_motor`, `rpm_tdp`, `rpm_ventilado
 -- Estrutura da tabela `trator`
 --
 
+DROP TABLE IF EXISTS `trator`;
 CREATE TABLE IF NOT EXISTS `trator` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
@@ -104,7 +103,17 @@ CREATE TABLE IF NOT EXISTS `trator` (
 
 INSERT INTO `trator` (`id`, `nome`, `rotacao_nominal_motor`, `rotacao_maxima_livre`, `relacao_transmissao_motor`, `relacao_transmissao_ventilador`, `horas_trator`, `aspiracao`, `densidade_combustivel`, `poder_calorifico`) VALUES
 (1, 'Valtra BM 125i', 2300, 2522, 3.440, 1.270, 180, 'Turbo - Intercooler', 0.840, 44.000),
-(8, 'asd', 1231, 123, 86.000, 76.000, 76, '76', 76.000, 76.000);
+(8, '(trator sem medições)', 1231, 123, 86.000, 76.000, 76, '(nada)', 76.000, 76.000);
+
+--
+-- Restrições para as tabelas dumpadas
+--
+
+--
+-- Restrições para a tabela `medicao`
+--
+ALTER TABLE `medicao`
+  ADD CONSTRAINT `FK_medicao_1` FOREIGN KEY (`id_trator`) REFERENCES `trator` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
