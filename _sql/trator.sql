@@ -7,6 +7,9 @@
 -- Versão do Servidor: 5.5.24-log
 -- Versão do PHP: 5.3.13
 
+create database `trator`;
+use `trator`;
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
