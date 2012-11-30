@@ -10,7 +10,7 @@ date_default_timezone_set('Etc/GMT+3'); // Define o fuso horário para funções
 /**************/
 
 define('CLASSES_PATH', '_classes/'); // Pasta de classes
-define('PAGES_PATH', '_pages/'); // Pasta com a estrutura do conteúdo do site
+define('PAGES_PATH', '_paginas/'); // Pasta com a estrutura do conteúdo do site
 define('CONFIG_PATH', '_config/'); // Pasta com as configurações da aplicação
 define('LAYOUT_PATH', '_layout/'); // Pasta para os arquivos comuns do layout
 define('THIRDPARTY_PATH', '3rdparty/'); // Pasta para componentes e bibliotecas de terceiros

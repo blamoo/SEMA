@@ -1,0 +1,177 @@
+[33mcommit 72dce8633f144162fe5aa2dd59c561472f43e3a8[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:51:52 2012 -0200
+
+    Criação do schema no sql
+
+[33mcommit b7445632de5dbb97afaa582f75dc6d7cfea38959[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:20:23 2012 -0200
+
+    Mudança de apresentação
+
+[33mcommit 9b65525e841fed529fed5077393031bbfeb2611a[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:20:09 2012 -0200
+
+    Separação das configurações do banco de dados
+
+[33mcommit 1f1a39ac4acd135955e355f309fd00c76503102b[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:19:47 2012 -0200
+
+    Adicionadas chaves estrangeiras no sql
+
+[33mcommit 2335a60b28cb1a068e740d461328d25bd438a5dd[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:19:34 2012 -0200
+
+    Inclusão do PHPWord no arquivo de licenças
+
+[33mcommit b6af28af26e7403ca585c52d237f539d6f13280b[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 17:19:08 2012 -0200
+
+    Biblioteca fpdf removida
+
+[33mcommit fac47864f1ee515d46637969e1cf5b8d39280e08[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 16:36:56 2012 -0200
+
+    Projeto do netbeans excluído
+
+[33mcommit 056dd7d11cea6d78a236573a2c5547baa61cafa0[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 28 16:36:46 2012 -0200
+
+    Mudanças de apresentação
+
+[33mcommit 461d250e19b2cb0d16dc66e5c8588afcec7fc9a9[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Tue Nov 27 19:53:54 2012 -0200
+
+    Ajustes nas telas de alteração de dados
+
+[33mcommit a3694815ce427271fa14acd39ef8175225964ed8[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Tue Nov 27 18:42:24 2012 -0200
+
+    Espaço entre os links da página inicial
+
+[33mcommit 9e66acf0065031e3c949644d6dc2297b0eb888da[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Tue Nov 27 16:38:36 2012 -0200
+
+    Página de recálculo das medições
+
+[33mcommit dfceeb9cd85c4cde2891693b251175bdcd82e811[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 21 14:22:13 2012 -0200
+
+    correção de bug nos gráficos do relatório
+
+[33mcommit 55241fe2f29f72def653286177806dd694395840[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 21 14:07:27 2012 -0200
+
+    tratamento de erros no relatório
+
+[33mcommit 562df17bda13a0d97942f8ecaa8e63a1bd1ddb4f[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 21 14:07:18 2012 -0200
+
+    correção na página de configurações
+
+[33mcommit 7535fa9e3e34a70d2cc91417c6c88027d75f74d3[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Nov 21 14:06:52 2012 -0200
+
+    CSS dinâmico revertido
+
+[33mcommit ff9ad6289a86109460ff2134743b171db3737832[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Tue Nov 20 20:15:56 2012 -0200
+
+    CSS dinâmico, resumo do relatório e configurações
+
+[33mcommit aefcc5d12c589dbda560a69eb67a9c121d9ebb24[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Tue Nov 6 16:09:36 2012 -0200
+
+    Adicionados dados do trator no relatório
+
+[33mcommit 449f6e2931d6ebdbc66689d779cdb791e56bd3cc[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Oct 11 17:39:12 2012 -0300
+
+    PHPWord atualizado para o fork
+
+[33mcommit b001480388b0fb1953d130371d708687acf8e4c2[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Oct 11 15:49:46 2012 -0300
+
+    Alterações no relatório e no fs_helper
+
+[33mcommit 940bab8a1eea96bb76ac3edc57c62f8754affb3c[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Oct 11 13:57:04 2012 -0300
+
+    projeto do netbeans, fallback, fork do PHPWord
+
+[33mcommit bc843394da8ccdef7a8ddb8b3517f6f22e46d345[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Oct 10 21:04:57 2012 -0300
+
+    Exportar relatório para docx, helper para arquivos
+
+[33mcommit f61adf244027f84a94e0c1cc2fd79266387e33d4[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Oct 10 14:13:50 2012 -0300
+
+    Biblioteca PHPWord adicionada
+
+[33mcommit 56b4ee0f2f8c087f206d9403c0459458a23e12a0[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Wed Oct 10 13:40:27 2012 -0300
+
+    arquivos inutilizados, espaçamento no rodapé
+
+[33mcommit da16c1722dbc584ba6e2e24edffd8dd5f4375d8e[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Fri Sep 28 14:18:28 2012 -0300
+
+    Campo "Fator de correção da força"
+
+[33mcommit 6d6a67dea504406abe5cadd57a3d44ed35596346[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Sep 27 23:22:46 2012 -0300
+
+    Organização de pastas
+    
+    sql movida pro root
+    arquivos .htaccess evitam acesso direto às pastas protegidas
+    __extra adicionada ao .gitignore
+
+[33mcommit 2a0e93915e5f82479f2f5decdce2bacd16a7ca46[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Sep 27 20:38:18 2012 -0300
+
+    Commit inicial
+
+[33mcommit 1d60a6d6d07fd35922e4e42cc51957b247bde0ad[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Sep 27 19:28:55 2012 -0300
+
+    Commit inicial
+
+[33mcommit 369597241e37a53c21995629b348079b5930bd09[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Sep 27 19:21:55 2012 -0300
+
+    Commit inicial
+
+[33mcommit 557a93ac3507899043b2fbdd640278f8ede40a1e[m
+Author: Luis Henrique Soler <blamoo2@hotmail.com>
+Date:   Thu Sep 27 19:01:13 2012 -0300
+
+    Commit inicial
