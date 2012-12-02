@@ -44,7 +44,7 @@ Contém imagens usadas na página.
 #### Pasta js
 Contém códigos e bibliotecas JavaScript usados na página.
 
-#### Pastas e aquivos precedidos de `.git`
+#### Pastas e arquivos precedidos de `.git`
 São arquivos internos do git. Só devem ser alterados por um usuário experiente ou pelo próprio git.
 
 Licenças
