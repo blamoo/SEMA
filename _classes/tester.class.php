@@ -58,7 +58,7 @@ class tester implements Countable
 	
 	public function isFalse($id, $test, $error)
 	{
-		return !$this->isTrue($id, $test, $error);
+		return $this->isTrue($id, !$test, $error);
 	}
 	
 	public function isDefined($id, &$test, $error)
