@@ -49,7 +49,7 @@ São arquivos internos do git. Só devem ser alterados por um usuário experient
 
 Licenças
 ========
-Ícones
+Ícones "Fugue Icons"
 ------
 These icons are available under a Creative Commons Attribution 3.0 License.
 
@@ -66,9 +66,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Animação GIF de carregamento de páginas
 ---------------------------------------
-ajaxload.info
-Code : Yannick Croissant
-Design : Kath
+http://ajaxload.info/
+
+Code: Yannick Croissant
+
+Design: Kath
 
 Biblioteca PHPWord
 ------------------
